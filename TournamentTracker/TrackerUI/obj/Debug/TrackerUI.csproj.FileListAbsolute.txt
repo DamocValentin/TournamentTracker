@@ -11,3 +11,8 @@ E:\TournamentTracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreatePrize
 E:\TournamentTracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTeamForm.resources
 E:\TournamentTracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTournamentForm.resources
 E:\TournamentTracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboardForm.resources
+E:\TournamentTracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.dll
+E:\TournamentTracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.pdb
+E:\TournamentTracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.CopyComplete
+E:\TournamentTracker\TournamentTracker\TrackerUI\bin\Debug\Dapper.dll
+E:\TournamentTracker\TournamentTracker\TrackerUI\bin\Debug\Dapper.xml

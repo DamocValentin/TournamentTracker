@@ -1,5 +1,5 @@
 ﻿
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class PrizeModel
     {
@@ -22,7 +22,7 @@ namespace TrackerLibrary
         /// <summary>
         /// Represents the percentage for this particular prize
         /// </summary>
-        public double PricePercentage { get; set; }
+        public double PrizePercentage { get; set; }
 
         public PrizeModel()
         {
@@ -40,7 +40,7 @@ namespace TrackerLibrary
             PrizeAmount = prizeAmountValue;
 
             double.TryParse(prizePercentage, out double prizePercentageValue);
-            PricePercentage = prizePercentageValue;
+            PrizePercentage = prizePercentageValue;
         }
     }
 }

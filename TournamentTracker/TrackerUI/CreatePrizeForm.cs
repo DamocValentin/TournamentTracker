@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using TrackerLibrary.DataPersistance;
+using TrackerLibrary.Models;
 using TrackerLibrary;
 
 namespace TrackerUI
@@ -39,7 +41,7 @@ namespace TrackerUI
 
         private bool ValidateForm()
         {
-            if (!int.TryParse(placeNameValue.Text, out int placeNumber))
+            if (!int.TryParse(placeNumberValue.Text, out int placeNumber))
             {
                 return false;
             }
