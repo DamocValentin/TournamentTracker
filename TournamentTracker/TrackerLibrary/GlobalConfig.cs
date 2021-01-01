@@ -1,27 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using TrackerLibrary.DataPersistance;
 
 namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
 
-        public static void InitializeConnections(bool database, bool textFile)
+        public static void InitializeConnections(DatabaseType db)
         {
-            if(database)
+            if(db == DatabaseType.Sql)
             {
                 //TODO Set up the SQL Connector properly
                 SqlConnection sql = new SqlConnection();
-                Connections.Add(sql);
+                Connection = sql;
             }
-
-            if(textFile)
+            else if(db == DatabaseType.TextFile)
             {
                 //TODO Set up the text Connector properly
                 TextConnection text = new TextConnection();
-                Connections.Add(text);
+                Connection = text;
             }
         }
 
