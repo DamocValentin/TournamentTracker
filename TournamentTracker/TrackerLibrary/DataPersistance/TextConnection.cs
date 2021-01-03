@@ -43,5 +43,10 @@ namespace TrackerLibrary.DataPersistance
             prizes.SaveToPrizeFile(PrizesFile);
             return model;
         }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+        }
     }
 }
