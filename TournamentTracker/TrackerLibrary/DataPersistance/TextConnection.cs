@@ -48,6 +48,18 @@ namespace TrackerLibrary.DataPersistance
         public TeamModel CreateTeam(TeamModel model)
         {
             List<TeamModel> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
+
+            model.Id = 1;
+
+            if (teams.Count > 0)
+            {
+                model.Id = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            teams.Add(model);
+
+            teams.SaveToTeamFile(TeamFile);
+            return model;
         }
 
         public List<PersonModel> GetPerson_All()
