@@ -66,5 +66,10 @@ namespace TrackerLibrary.DataPersistance
         {
             return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
         }
+
+        public List<TeamModel> GetTeam_All()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
