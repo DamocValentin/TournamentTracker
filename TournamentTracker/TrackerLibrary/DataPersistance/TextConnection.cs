@@ -11,6 +11,8 @@ namespace TrackerLibrary.DataPersistance
         private const string PeopleFile = "PersonModels.csv";
         private const string TeamFile = "TeamModels.csv";
         private const string TournamentFile = "TournamentModels.csv";
+        private const string MatchupFile = "MatchupModels.csv";
+        private const string MatchupEntryFile = "MatchupEntryModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
@@ -74,6 +76,9 @@ namespace TrackerLibrary.DataPersistance
             }
 
             model.Id = currentId;
+
+            model.SaveRoundsToFile(model, MatchupFile, MatchupEntryFile);
+
             tournaments.Add(model);
 
             tournaments.SaveTournamentFile(TournamentFile);
