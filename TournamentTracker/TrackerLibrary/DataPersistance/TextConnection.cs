@@ -77,7 +77,7 @@ namespace TrackerLibrary.DataPersistance
 
             model.Id = currentId;
 
-            model.SaveRoundsToFile(model, MatchupFile, MatchupEntryFile);
+            model.SaveRoundsToFile(MatchupFile, MatchupEntryFile);
 
             tournaments.Add(model);
 
